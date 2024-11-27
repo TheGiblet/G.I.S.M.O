@@ -5,7 +5,7 @@
 # - Rear obstacle detection using an additional IR sensor (active only in reverse)
 # - I2S audio output using a Daokai MAX98357 I2S Class D amplifier and speaker
 # - Touch sensor on GPIO 22 to trigger a "shake" behavior (with debouncing)
-# - Camera for capturing images and video
+# - Camera for capturing images and video - doesnt work
 
 import RPi.GPIO as GPIO
 import time
