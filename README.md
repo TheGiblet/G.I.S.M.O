@@ -71,9 +71,11 @@ The main code for the robot is in `v2.3.17.py` (this is a temporary name). It in
 
 After much effort and numerous iterations using libcamera and libcamera-still, I finally got the camera working on my Raspberry Pi. Unfortunately, I encountered performance issues, including significant lag. As a result, I decided to revert to capturing timestamped images of obstacles and storing them. The robot now takes a picture, processes it, and then looks for a clear route to continue its journey. This solution is more efficient given the limited resources of the Raspberry Pi and ensures smooth operation.
 
-## Update: Sensor Migration to PCA9685  
-
+## Update: Sensor Migration to PCA9685 
 Due to running out of usable GPIO and I2C pins on my Raspberry Pi, I've decided to migrate many of the sensors to the PCA9685 PWM driver. This allows the Raspberry Pi to handle heavier tasks while the PCA9685 manages sensor operations more efficiently. By offloading these sensors, I can optimize performance and ensure smoother operation of the robot.
+
+## Update: Power Supply Enhancement
+I'm adding a diymore Battery Shield V8 with 3V/5V output, featuring Micro USB and Type-C USB ports, to improve the power supply for my robot. This enhancement will ensure a more reliable and versatile power source, enhancing the robot's mobility and functionality. https://www.amazon.co.uk/dp/B0822Q4VS4?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1
 
 ## Future Plans 
 
