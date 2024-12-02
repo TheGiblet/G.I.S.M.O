@@ -57,7 +57,7 @@ This project is an exploration into robotics and automation using a Raspberry Pi
 *   
 ## Code
 
-The main code for the robot is in `v2.2.7.py` (this is a temporary name). It includes the following functionalities:
+The main code for the robot is in `v2.3.17.py` (this is a temporary name). It includes the following functionalities:
 
 * Motor control functions (forward, backward, turn, stop)
 * Sensor readings (ultrasonic, IR, touch)
@@ -67,11 +67,15 @@ The main code for the robot is in `v2.2.7.py` (this is a temporary name). It inc
 * Touch interaction (shake behavior)
 * Camera control (image capture)
 
-##Update: Camera Functionality and Optimized Navigation
+## Update: Camera Functionality and Optimized Navigation
 
 After much effort and numerous iterations using libcamera and libcamera-still, I finally got the camera working on my Raspberry Pi. Unfortunately, I encountered performance issues, including significant lag. As a result, I decided to revert to capturing timestamped images of obstacles and storing them. The robot now takes a picture, processes it, and then looks for a clear route to continue its journey. This solution is more efficient given the limited resources of the Raspberry Pi and ensures smooth operation.
 
-## Future Plans
+## Update: Sensor Migration to PCA9685  
+
+Due to running out of usable GPIO and I2C pins on my Raspberry Pi, I've decided to migrate many of the sensors to the PCA9685 PWM driver. This allows the Raspberry Pi to handle heavier tasks while the PCA9685 manages sensor operations more efficiently. By offloading these sensors, I can optimize performance and ensure smoother operation of the robot.
+
+## Future Plans 
 
 * Integrate audio feedback.
 * Integrate the micro:bit for additional sensing, input, and communication.
