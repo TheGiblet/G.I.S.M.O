@@ -67,6 +67,10 @@ The main code for the robot is in `v2.2.7.py` (this is a temporary name). It inc
 * Touch interaction (shake behavior)
 * Camera control (image capture)
 
+##Update: Camera Functionality and Optimized Navigation
+
+After much effort and numerous iterations using libcamera and libcamera-still, I finally got the camera working on my Raspberry Pi. Unfortunately, I encountered performance issues, including significant lag. As a result, I decided to revert to capturing timestamped images of obstacles and storing them. The robot now takes a picture, processes it, and then looks for a clear route to continue its journey. This solution is more efficient given the limited resources of the Raspberry Pi and ensures smooth operation.
+
 ## Future Plans
 
 * Integrate audio feedback.
